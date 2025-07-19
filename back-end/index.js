@@ -9,8 +9,8 @@ connectedDB()
 
 app.get("/api",getData)
 app.post("/api/insertdata",postData)
-app.put("/api/updatedata",putData)
-app.delete("/api/deletedata",deleteData)
+app.put("/api/updatedata/:id",putData)
+app.delete("/api/deletedata/:id",deleteData)
 
 
 

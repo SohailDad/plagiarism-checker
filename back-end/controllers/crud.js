@@ -9,7 +9,7 @@ const getData = async (req, res) => {
         if (getUsers.length === 0) {
             return res.status(404).json({ message: "No users found!" });
         }
-        res.status(200).json({ getUsers })
+        res.status(200).json( getUsers )
 
     } catch (error) {
         console.error("interval server error: ", error);
@@ -41,7 +41,20 @@ const postData = async (req, res) => {
 
 const putData = async (req, res) => {
 
+    const id = req.params;
+    const updateUser = req.body
+     if (!updateUser.name || !updateUser.email || !updateUser.password || !id) {
+            return res.status(400).json({ message: "Please fill all required fields!" });
+        }
 
+
+    try {
+        
+        await userDetail.findByIdAndUpdate(id,updateUser)
+
+    } catch (error) {
+
+    }
 
 
 }

@@ -66,8 +66,20 @@ const putData = async (req, res) => {
 }
 
 const deleteData = async (req, res) => {
+    const id = req.params.id
 
+    if (!id) {
+        return res.status(400).json({ message: "Not found id!" });
+    }
 
+    try {
+        const deletedUser = await userDetail.findByIdAndDelete(id);
+        res.status(200).json({message:"User Successfully Deleted!",data: deletedUser})
+
+    } catch (error) {
+        console.error("interval server error: ", error);
+        res.status(500).json({ message: "Internal server error." });
+    }
 
 
 }

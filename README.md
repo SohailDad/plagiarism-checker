@@ -1,0 +1,1 @@
+# Plagiarism-chacker project in MERN stack.

@@ -41,8 +41,10 @@ const postData = async (req, res) => {
 
 const putData = async (req, res) => {
 
-    const id = req.params;
+    const id = req.params.id;
     const updateUser = req.body
+
+    // console.log("upadted user Data: ",id,updateUser) //for testing 
      if (!updateUser.name || !updateUser.email || !updateUser.password || !id) {
             return res.status(400).json({ message: "Please fill all required fields!" });
         }
@@ -50,9 +52,13 @@ const putData = async (req, res) => {
 
     try {
         
-        await userDetail.findByIdAndUpdate(id,updateUser)
+       const updatedUser =  await userDetail.findByIdAndUpdate(id,updateUser,{ new: true })
+
+       res.status(200).json({message:"User successfully updated!",data: updatedUser})
 
     } catch (error) {
+        console.error("interval server error: ", error);
+        res.status(500).json({ message: "Internal server error." });
 
     }
 

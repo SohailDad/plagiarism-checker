@@ -25,6 +25,8 @@ Tesseract.recognize(
   console.error("OCR Error:", error);
 })
 
+
+// crud operation api
 app.get("/api",getData)
 app.post("/api/insertdata",postData)
 app.put("/api/updatedata/:id",putData)

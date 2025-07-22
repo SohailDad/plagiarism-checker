@@ -1,7 +1,6 @@
 const express = require("express");
 const {getData, postData, putData, deleteData} = require("./controllers/crud")
 const connectedDB = require("./config/db")
-// Import the Tesseract.js library
 const Tesseract = require('tesseract.js');
 
 const app = express();

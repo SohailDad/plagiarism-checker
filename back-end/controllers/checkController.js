@@ -26,10 +26,31 @@ exports.handleCheck = async (req, res) => {
     const referenceText = fs.readFileSync("reference_data/research.txt", "utf-8");
 
     const similarity = compareText(textContent, referenceText);
-    console.log(`similarity: ${similarity}`)
+    console.log(`similarity: ${similarity}`)// f
     res.json({ similarity: `${similarity}%` });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error." });
   }
+};
+
+exports.checkUserText = async(req,res)=>{
+  try {
+    const userText = req.body.userText
+    console.log("usertext: ",userText)
+    if(!userText) return res.status(400).json({message: "No any text sumbit!!"})
+
+    const referenceText = fs.readFileSync("reference_data/research.txt","utf-8");
+    
+    const similarity = compareText(userText,referenceText);
+
+    console.log(`similarity: ${similarity}%`) //for testing 
+    res.status(200).json({similarity: `${similarity}%`})
+
+
+  } catch (error) {
+      console.error(error);
+    res.status(500).json({ message: "Server error." });
+  }
+
 };

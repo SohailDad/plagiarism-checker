@@ -21,10 +21,12 @@ exports.handleCheck = async (req, res) => {
     } else {
       return res.status(400).json({ message: "Unsupported file type." });
     }
+    // console.log("textContent: ",textContent);// for texting
 
     const referenceText = fs.readFileSync("reference_data/research.txt", "utf-8");
 
     const similarity = compareText(textContent, referenceText);
+    console.log(`similarity: ${similarity}`)
     res.json({ similarity: `${similarity}%` });
   } catch (err) {
     console.error(err);

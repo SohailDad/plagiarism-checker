@@ -1,0 +1,40 @@
+Fake news detection: a systematic literature review of
+machine learning algorithms and datasets
+‘Humberto Fernandes Villla ® [ Universidade FUMEC | humberto.villela@gmaiLcom |
+Fibio Corréa © | Universidade FUMEC | fabiocontact@ gmail.com |
+Jurema Suely de Aratijo Nery Ribeiro © | Universidade FUMEC | jurema nery@gmailcom |
+Air Rabelo © [ Universidade FUMEC | air @fumec.br |
+Daclntan Barbosa Feres Carvalho ® [ Universidade Federal de So Jodo del-Rei | darlinton@acm.org |
+Abstract
+Fake news (ie. false news created 0 have a high capacity for dissemination and malicious intentions) s a
+problem of great inert to society today since t has achieved unprecedented politcal, economic, and ockl -
+pacts. Taking advantage of modern digital communication and information technologies, they are widely propa-
+ated through social medi, being ther use tenional and challenging 0 dent. Tn onde o mitigate the damage.
+caused by fake news, researchers have been seeking the development of automated mechanisms to detect hem,
+such as algorithms based on machine learning as wel asthe datasets employed in this developmen. Thi resech
+ms to analyze the machine eaming algorithms and datasets usd In trining 1 ently ake news published In
+he lnerature. 1 exploratory research with a qualiatve approach, which use a research protocol to dently
+studies wih the intention of analyzing them. As a esl, we have the algorithms Stacking Method. Bidirectional
+Recurcent Neural Network (BIRNN). and Convolutional Neural Network (CNN), with 99.95%, 99.8%, and 99.8%
+accuracy. respectively. Although his accuracy is expressive, most of the research employed datasets In controlled
+environments (e.. Kagale) or without information updated i realtime (om social networks). Sl, only few
+Studies ave been applied in octal network environments, where the most significant dissemination of disinfor-
+‘mation occurs nowadays. Kaggle was the platform identified wih the most frequently used datasets, being suc-
+ceeded by Weibo, FNC_1, COVID-19 Fake News, and Twitter. For future research, studies should be cared out
+in addition 0 news about politics, the area that was the primary motivator fot the growth of research from 2017,
+and he use of hybrid methods for entifying fake news
+Keywords: Algoriths, datas, accuracy. fake news, aruictal intelligence.
+. that is, according to the datasets used for raining (Ahuja &
+1 Introduction Kumar, 2020). For this reason, Jiang et al (2021) and Ahuja
+and Kumar (2020) recommend continuing research using
+Currently, the tem fake news s onthe rise as this type of Soc HURRY B20) Keanent Sonim rene SEG
+news can remarkably influence society, promoting signifi. 10 HES 8
+cant political, economic, or soclal impacts (Zhang et al, Nevertheless, recurring studies to detect fake news have
+2016; Islam et al, 2020). They are false news created to be - 8
+‘highly broadcastable, usually with malicious intent (i.e., to achieved relevant accomplishments. The research by Bur
+4 ‘ghly ro hn alsehood) . foot and Baldwin (2009) reached 71% accuracy in detecting.
+jecelve, cause ambiguity, or fa'senao fake news, while Ahmed, Traore, and Saad (2017) raised
+Inthe political context, specifically, Almeida eral. (2021)
+this metric to 879%, the same percentage achieved by Low et
+point out he impacts of fake news on the US presidential 4) (p07
+elections in 2016, having President Donald Trump elected. Medeirne and Reaca (2190) rarried rast reconrrh aiming

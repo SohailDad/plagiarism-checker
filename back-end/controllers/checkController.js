@@ -8,7 +8,7 @@ exports.handleCheck = async (req, res) => {
   try {
     const file = req.file;
     if (!file) return res.status(400).json({ message: "No file uploaded!" });
-    console.log("Field data: ",file)
+    console.log("Field data: ",file) // for testing
 
     let textContent = "";
 
@@ -21,6 +21,7 @@ exports.handleCheck = async (req, res) => {
     } else {
       return res.status(400).json({ message: "Unsupported file type." });
     }
+    
     // console.log("textContent: ",textContent);// for texting
 
     const referenceText = fs.readFileSync("reference_data/research.txt", "utf-8");

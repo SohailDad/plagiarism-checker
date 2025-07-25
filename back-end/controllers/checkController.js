@@ -8,7 +8,7 @@ exports.handleCheck = async (req, res) => {
   try {
     const file = req.file;
     if (!file) return res.status(400).json({ message: "No file uploaded!" });
-    console.log("Field data: ",file) // for testing
+    // console.log("Field data: ",file) // for testing
 
     let textContent = "";
 
@@ -22,13 +22,13 @@ exports.handleCheck = async (req, res) => {
       return res.status(400).json({ message: "Unsupported file type." });
     }
     
-    // console.log("textContent: ",textContent);// for texting
+    console.log("textContent: ",textContent);// for texting
 
     const referenceText = fs.readFileSync("reference_data/research.txt", "utf-8");
 
     const similarity = compareText(textContent, referenceText);
-    console.log(`similarity: ${similarity}`)// f
-    res.json({ similarity: `${similarity}%` });
+    console.log(`similarity: ${similarity * 100}%`)// f
+    res.json({ similarity: `${similarity * 100}%` });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error." });
@@ -38,7 +38,7 @@ exports.handleCheck = async (req, res) => {
 exports.checkUserText = async(req,res)=>{
   try {
     const userText = req.body.userText
-    console.log("usertext: ",userText)
+    // console.log("usertext: ",userText) // for testing
     if(!userText) return res.status(400).json({message: "No any text sumbit!!"})
 
     const referenceText = fs.readFileSync("reference_data/research.txt","utf-8");
